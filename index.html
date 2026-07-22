@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Portfolio</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --heading: #1e293b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+
+        header { background: var(--primary); color: #fff; padding: 3rem 1.5rem; text-align: center; }
+        header h1 { font-size: 2.2rem; color: #fff; margin-bottom: 0.5rem; }
+        header p { font-size: 1.1rem; color: #94a3b8; max-width: 600px; margin: 0 auto 1.5rem; }
+        .contact-links a { color: #38bdf8; text-decoration: none; margin: 0 10px; font-weight: 600; }
+        .contact-links a:hover { text-decoration: underline; }
+
+        container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; display: block; }
+
+        section { margin-bottom: 3rem; }
+        h2 { font-size: 1.5rem; color: var(--heading); border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+
+        .project-card { background: var(--card-bg); border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 2rem; overflow: hidden; border: 1px solid #e2e8f0; }
+        .project-content { padding: 1.5rem; }
+        .project-title { font-size: 1.3rem; color: var(--heading); margin-bottom: 0.5rem; }
+        .tech-tags { margin-bottom: 1rem; }
+        .tag { display: inline-block; background: #eff6ff; color: var(--accent); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-right: 0.5rem; margin-bottom: 0.5rem; }
+
+        .project-preview { width: 100%; max-height: 400px; object-fit: cover; border-bottom: 1px solid #e2e8f0; background-color: #cbd5e1; display: block; }
+
+        ul.highlights { margin-left: 1.2rem; margin-bottom: 1rem; }
+        ul.highlights li { margin-bottom: 0.4rem; }
+
+        .dax-snippet { background: #0f172a; color: #f8fafc; padding: 1rem; border-radius: 6px; font-family: 'Courier New', Courier, monospace; font-size: 0.85rem; overflow-x: auto; margin-top: 1rem; }
+
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+        .skill-box { background: var(--card-bg); padding: 1rem; border-radius: 6px; border: 1px solid #e2e8f0; }
+        .skill-box h3 { font-size: 1rem; color: var(--accent); margin-bottom: 0.5rem; }
+
+        footer { text-align: center; padding: 2rem; background: #e2e8f0; font-size: 0.9rem; color: #64748b; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Data Analyst Portfolio</h1>
+        <p>Specializing in Power BI dashboard development, financial modeling, SQL queries, and data-driven insights.</p>
+        <div class="contact-links">
+            <a href="mailto:your.email@example.com">Email</a> | 
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <container>
+        <!-- Featured Projects -->
+        <section>
+            <h2>Featured Business Intelligence Projects</h2>
+
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <!-- Replace 'preview1.png' with your anonymized dashboard image file -->
+                <img src="https://via.placeholder.com/1000x400?text=Power+BI+Financial+Dashboard+Preview" alt="Financial Dashboard Preview" class="project-preview">
+                <div class="project-content">
+                    <h3 class="project-title">Financial Reporting Suite (P&L, Balance Sheet, Cash Flow)</h3>
+                    <div class="tech-tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Advanced DAX</span>
+                        <span class="tag">Power Query ETL</span>
+                        <span class="tag">Financial Modeling</span>
+                    </div>
+                    <ul class="highlights">
+                        <li><strong>Objective:</strong> Designed an automated end-to-end financial suite to track company P&L, balance sheets, and cash flow across business units.</li>
+                        <li><strong>Technical Execution:</strong> Used Power Query for complex ETL processes and built advanced DAX time-intelligence calculations for Year-over-Year (YoY) variances.</li>
+                        <li><strong>Business Impact:</strong> Presented actionable reporting directly to senior management, reducing manual financial reconciliation time.</li>
+                    </ul>
+                    <div class="dax-snippet">
+// Sample DAX Formula Highlight
+YoY Growth % = 
+VAR CurrentPeriod = [Total Net Revenue]
+VAR PriorPeriod = CALCULATE([Total Net Revenue], SAMEPERIODLASTYEAR('Calendar'[Date]))
+RETURN
+DIVIDE(CurrentPeriod - PriorPeriod, PriorPeriod, 0)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <!-- Replace 'preview2.png' with your anonymized dashboard image file -->
+                <img src="https://via.placeholder.com/1000x400?text=Operations+Dashboard+Preview" alt="Operations Dashboard Preview" class="project-preview">
+                <div class="project-content">
+                    <h3 class="project-title">Multi-Industry Analytics & KPI Monitoring</h3>
+                    <div class="tech-tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Data Modeling</span>
+                        <span class="tag">DAX</span>
+                        <span class="tag">Process Analytics</span>
+                    </div>
+                    <ul class="highlights">
+                        <li><strong>Objective:</strong> Developed interactive performance dashboards across healthcare, logistics, and finance domains to track core operations.</li>
+                        <li><strong>Technical Execution:</strong> Modeled star-schema data relationships and configured dynamic drill-through filters for departmental managers.</li>
+                        <li><strong>Business Impact:</strong> Identified operational bottlenecks and optimized metric tracking for key stakeholders.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Matrix -->
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h3>Business Intelligence</h3>
+                    <p>Power BI (DAX, Power Query, Data Modeling), Tableau, Excel Dashboards</p>
+                </div>
+                <div class="skill-box">
+                    <h3>Data Analytics & Databases</h3>
+                    <p>SQL (Queries, Joins, Aggregations), Python (Pandas, NumPy, Seaborn), ETL Workflows</p>
+                </div>
+                <div class="skill-box">
+                    <h3>Domain Expertise</h3>
+                    <p>Financial Statement Analysis, Marketing Analytics, Business Process Analysis, EDA</p>
+                </div>
+            </div>
+        </section>
+    </container>
+
+    <footer>
+        <p>© 2026 Data Analyst Portfolio | Hosted on GitHub Pages</p>
+    </footer>
+
+</body>
+</html>
